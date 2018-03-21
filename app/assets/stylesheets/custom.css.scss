@@ -1,0 +1,48 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+    margin: 0px;
+
+}
+header{
+    width: auto;
+    height: 60px;
+    border-bottom: 2px solid black;
+}
+#logo{
+    width: 170px;
+    height: 60px;
+    float: left;
+}
+#imglogo{
+    margin: 18px 12px;
+}
+#imgbgr{
+    width: 100%;
+    height: 900px;
+}
+#News{
+    margin: 18px 12px 0px 300px;
+    float: left;
+    font-size: 20px;
+}
+#Clothing{
+    margin: 18px 12px 0px 30px;
+    float: left;
+    font-size: 20px;
+}
+#Contact{
+    margin: 18px 12px 0px 30px;
+    float: left;
+    font-size: 20px;
+}
+#Accessories{
+    margin: 18px 12px 0px 30px;
+    float: left;
+    font-size: 20px;   
+}
+#Login{
+    float: right;
+    margin: 18px 25px;
+}
