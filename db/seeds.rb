@@ -23,7 +23,7 @@ Product.create(
   category_id:  "1",
   price: 250.000 ,
   discount:  0 ,
-  image_link =>  "assets/images/quanVai2.jpg",
+  image_link:  "assets/images/quanVai2.jpg",
   image_list:  "",
   view:  9
   )
@@ -60,3 +60,22 @@ Product.create(
 ["Pants","Shirts","T-Shirts","Polo","Jacket","Jeans","Coats","Accessories"].each do |name|
   Category.create name: name
 end
+
+User.create!(name:  "Example User",
+             email: "example@railstutorial.org",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             admin:     true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+99.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  User.create!(name:  name,
+              email: email,
+              password:              password,
+              password_confirmation: password,
+              activated: true,
+              activated_at: Time.zone.now)
