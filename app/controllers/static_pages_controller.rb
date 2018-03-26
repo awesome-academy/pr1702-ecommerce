@@ -1,13 +1,9 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
+  def home; end
 
-  def products
-  end
+  def category; end
 
-  def about
-  end
+  def products; end
 
-  def blogs
-  end
+  def blogs; end
 end
