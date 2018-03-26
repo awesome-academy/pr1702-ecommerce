@@ -24,7 +24,7 @@ header{
 }
 
 #img-Logo {
-  margin: 18px 12px;
+  margin: 10px 12px;
 }
 
 #imglogo{
@@ -37,19 +37,19 @@ header{
 }
 
 #news {
-  margin: 18px 12px 0px 300px;
+  margin: 10px 12px 0px 300px;
   float: left;
   font-size: 20px;
 }
 
 #clothing {
-  margin: 18px 12px 0px 30px;
+  margin: 10px 12px 0px 30px;
   float: left;
   font-size: 20px;
 }
 
 #contact {
-  margin: 18px 12px 0px 30px;
+  margin: 10px 12px 0px 30px;
   float: left;
   font-size: 20px;
 }
@@ -60,7 +60,7 @@ header{
 }
 
 #navigation {
-  float: right;
+  float: left;
 }
 
 #info-Product {
@@ -71,6 +71,7 @@ header{
   float: left;
   width: 220px;
   margin: 0px 3px 5px 5px;
+  border: 1px solid;
 }
 
 #ul-Products {
@@ -79,7 +80,10 @@ header{
 
 #ul-Category {
   float: left;
+  t-style-type: none;
   list-style-type: none;
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 0px;
 }
 
 #li-Category:hover {
@@ -98,34 +102,45 @@ header{
   text-align: center;
 }
 
-#a-Product {
+#li-Product {
   margin-top: -5px;
   margin-bottom: 5px;
+  list-style-type: none;
 }
 
 #price-Product {
   color: red;
   font-size: 22px;
-  margin-left: 30px;
+  margin-top: 15px;
+  padding-left: 0px;
+  text-align: center;
 }
 
 #img-Image {
   margin: 0px 10px 0px -30px;
 }
 
+#product-Name {
+  margin-top: 6px;
+}
+
+#img-Image {
+  margin: 0px 0px 0px -40px
+}
+
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 5px 10px;
   display: inline-block;
 }
 
-#Accessories{
+#Accessories {
   margin: 18px 12px 0px 30px;
   float: left;
   font-size: 20px;
 }
 
-#Login{
+#Login {
   float: right;
   margin: 18px 25px;
 }
@@ -203,4 +218,12 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+#sign-Up {
+  text-align: center;
+}
+
+#log-In {
+  text-align: center;
 }

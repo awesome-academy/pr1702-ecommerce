@@ -18,16 +18,18 @@
             <div class="info-Product">
               <ul>
                 <div id="img-Image">
-                  <%= image_tag product.image_link, class: "list-Image" %>
+                  <%= link_to image_tag(product.image_link), product_path(product) %>
                 </div>
               </ul>
 
               <ul id="list-Description">
-                <a id="a-Product"><%= product.name %></a>
+                <li id="li-Product">
+                  <%= link_to product.name, product_path(product) %>
+                </li>
               </ul>
 
-              <ul>
-                <div id="price-Product" >
+              <ul id="price-Product">
+                <div>
                   <%= product.price %>.000
                 </div>
               </ul>
