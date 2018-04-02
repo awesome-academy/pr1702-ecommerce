@@ -1,0 +1,47 @@
+<% provide :title, t(".clothings") %>
+<div id="product-Name">
+  <div>
+    <% @category.each do |category| %>
+      <div class="navigation">
+        <ul id="ul-Category">
+          <li id="li-Category"><a href="#"><%= category.name %></a></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="product-List">
+    <% if @products.present? %>
+      <% @products.each do |product| %>
+        <fieldset class="fieldset">
+          <tbody>
+            <div class="info-Product">
+              <ul>
+                <div id="img-Image">
+                  <%= image_tag(product.image_link, :class => "list-Image") %>
+                </div>
+              </ul>
+
+              <ul id="list-Description">
+                <a id="a-Product"><%= product.name %></a>
+              </ul>
+
+              <ul>
+                <div id="price-Product" >
+                  <%= product.price %>.000
+                </div>
+              </ul>
+
+              <ul id="ul-Products">
+                <%= link_to t(".show"), product %>
+                <%= link_to t(".edit"), edit_product_path(product) %>
+                <%= link_to t(".destroy"), product,
+                  data: {confirm: t(".are_you_sure?")}, method: :delete %>
+              </ul>
+            </div>
+          </tbody>
+        </fieldset>
+      <% end %>
+    <% end %>
+  </div>
+</div>

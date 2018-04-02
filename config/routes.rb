@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  root "static_pages#home"
 
-  get 'clothing' => 'static_pages#clothing'
+  get "/news" , to: "static_pages#news"
+  get "/contact" , to: "static_pages#contact"
+  get "/signin" , to: "users#create"
+  get "/clothing" , to: "products#index"
 
-  get 'news'    => 'static_pages#news'
+  scope "(:locale)" do
+    resources :products
+    resources :category
+  end
 
-  get 'accessories'    => 'static_pages#accessories'
-
-  get 'contact'    => 'static_pages#contact'
-
-  get  'signin'  => 'users#create'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
