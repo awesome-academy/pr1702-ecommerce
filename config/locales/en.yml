@@ -26,3 +26,10 @@ en:
       posted: "Posted"
       ago: "ago."
   is_not_supported: "is not supported"
+  Check_mail: "Please check your email to activate your account"
+  Invalid: "Invalid email/password combination"
+  not_active: "Account not activated. Check your email for the activation link"
+
+  Activated: "Account Activated"
+
+  Inv_link: "Invalid activation link"

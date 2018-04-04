@@ -6,4 +6,5 @@ class StaticPagesController < ApplicationController
   def products; end
 
   def blogs; end
+
 end
