@@ -1,49 +1,62 @@
 <% provide :title, t(".clothings") %>
 <div id="product-Name">
-  <div>
-    <% @category.each do |category| %>
-      <div class="navigation">
-        <ul id="ul-Category">
-          <li id="li-Category"><a href="#"><%= category.name %></a></li>
-        </ul>
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-3 category">
+        <h4>Mango Man</h4>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Blog..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+        <% @category.each do |category| %>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#"><%= category.name %></a></li>
+          </ul><br>
+        <% end %>
       </div>
-    <% end %>
-  </div>
 
-  <div class="product-List">
-    <% if @products.present? %>
-      <% @products.each do |product| %>
-        <fieldset class="fieldset">
-          <tbody>
-            <div class="info-Product">
-              <ul>
-                <div id="img-Image">
-                  <%= link_to image_tag(product.image_link), product_path(product) %>
-                </div>
-              </ul>
+      <div class="col-sm-9 product">
+        <div class="product-List">
+          <% if @products.present? %>
+            <% @products.each do |product| %>
+              <fieldset class="fieldset">
+                <tbody>
+                  <div class="info-Product">
+                    <ul>
+                      <div id="img-Image">
+                        <%= link_to image_tag(product.image_link), product_path(product) %>
+                      </div>
+                    </ul>
 
-              <ul id="list-Description">
-                <li id="li-Product">
-                  <%= link_to product.name, product_path(product) %>
-                </li>
-              </ul>
+                    <ul id="list-Description">
+                      <li id="li-Product">
+                        <%= link_to product.name, product_path(product) %>
+                      </li>
+                    </ul>
 
-              <ul id="price-Product">
-                <div>
-                  <%= product.price %>.000
-                </div>
-              </ul>
+                    <ul id="price-Product">
+                      <div>
+                        <%= product.price %>.000
+                      </div>
+                    </ul>
 
-              <ul id="ul-Products">
-                <%= link_to t(".show"), product %>
-                <%= link_to t(".edit"), edit_product_path(product) %>
-                <%= link_to t(".destroy"), product,
-                  data: {confirm: t(".are_you_sure?")}, method: :delete %>
-              </ul>
-            </div>
-          </tbody>
-        </fieldset>
-      <% end %>
-    <% end %>
+                    <ul id="ul-Products">
+                      <%= link_to t(".show"), product %>
+                      <%= link_to t(".edit"), edit_product_path(product) %>
+                      <%= link_to t(".destroy"), product,
+                        data: {confirm: t(".are_you_sure?")}, method: :delete %>
+                    </ul>
+                  </div>
+                </tbody>
+              </fieldset>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -59,10 +59,6 @@ header{
   margin: 18px 25px;
 }
 
-#navigation {
-  float: left;
-}
-
 #info-Product {
   float: left;
 }
@@ -76,23 +72,6 @@ header{
 
 #ul-Products {
   margin: -10px 0px 10px -20px;
-}
-
-#ul-Category {
-  float: left;
-  t-style-type: none;
-  list-style-type: none;
-  padding: 10px 10px 0px 10px;
-  margin-bottom: 0px;
-}
-
-#li-Category:hover {
-  background-color: pink;
-}
-
-#li-Category {
-  padding: 10px 15px 10px;
-  margin: 0px 12px 20px;
 }
 
 #list-Description {
@@ -226,4 +205,12 @@ input {
 
 #log-In {
   text-align: center;
+}
+
+.category {
+  width: 17%;
+}
+
+.product {
+  width: 83%;
 }
