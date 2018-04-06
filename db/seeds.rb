@@ -1,59 +1,59 @@
 Product.create(
-  name:  "Quan Vai Dai 1",
-  category_id:  "1",
-  price:  200.000 ,
-  discount:  0 ,
-  image_link:   "assets/images/quanVai1.jpeg",
-  image_list:  "",
-  view:  6
+  name: "Quan Vai Dai 1",
+  category_id: "1",
+  price: 200.000 ,
+  discount: 0 ,
+  image_link: "quanVai1.jpeg",
+  image_list: "",
+  view: 6
   )
 
 Product.create(
-  name:  "Quan Bo",
+  name: "Quan Bo",
   category_id: "6",
   price: 300.000 ,
-  discount:  0 ,
-  image_link: "assets/images/quanBo.jpg",
-  image_list:  "",
+  discount: 0 ,
+  image_link: "quanBo.jpg",
+  image_list: "",
   view: 9
   )
 
 Product.create(
-  name:  "Quan Vai Dai 2",
-  category_id:  "1",
+  name: "Quan Vai Dai 2",
+  category_id: "1",
   price: 250.000 ,
-  discount:  0 ,
-  image_link:  "assets/images/quanVai2.jpg",
-  image_list:  "",
-  view:  9
+  discount: 0 ,
+  image_link: "quanVai2.jpg",
+  image_list: "",
+  view: 9
   )
 
 
 Product.create(
   name: "Ao Dai",
-  category_id:  "2",
-  price:  200.000 ,
-  discount:  0 ,
-  image_link:   "assets/images/aoDai.jpg",
-  image_list:   "",
+  category_id: "2",
+  price: 200.000 ,
+  discount: 0 ,
+  image_link: "aoDai.jpg",
+  image_list: "",
   view: 5
   )
 Product.create(
   name: "Giay Tay",
-  category_id:  "8",
+  category_id: "8",
   price:  500.000 ,
-  discount:  0 ,
-  image_link:   "assets/images/giayTay.jpg",
-  image_list:   "",
-  view:  7
+  discount: 0 ,
+  image_link: "giayTay.jpg",
+  image_list: "",
+  view: 7
   )
 Product.create(
   name: "Vong Co",
   category_id: "8",
   price: 200.000 ,
   discount: 0 ,
-  image_link:  "assets/images/vongCo.jpeg",
-  image_list:  "",
+  image_link: "vongCo.jpeg",
+  image_list: "",
   view: 7
   )
 
@@ -65,18 +65,19 @@ User.create!(name:  "Example User",
              email: "example@railstutorial.org",
              password:              "foobar",
              password_confirmation: "foobar",
-             admin:     true,
+             address: "Hanoi",
              activated: true,
              activated_at: Time.zone.now)
 
-99.times do |n|
-  name  = Faker::Name.name
+10.times do |n|
+  name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
   User.create!(name:  name,
               email: email,
               password:              password,
               password_confirmation: password,
+              address: "Hanoi",
               activated: true,
               activated_at: Time.zone.now)
 end
