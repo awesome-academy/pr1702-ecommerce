@@ -30,7 +30,7 @@ Product.create(
 
 
 Product.create(
-  name : "Ao Dai",
+  name: "Ao Dai",
   category_id:  "2",
   price:  200.000 ,
   discount:  0 ,
