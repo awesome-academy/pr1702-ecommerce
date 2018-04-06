@@ -8,6 +8,7 @@ end
 gem "bcrypt", "3.1.11"
 gem "bootstrap-sass", "~>3.3.6"
 gem "coffee-rails", "~> 4.2"
+gem "faker", "~> 1.8", ">= 1.8.7"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "mysql2",  ">= 0.3.18", "< 0.5"
