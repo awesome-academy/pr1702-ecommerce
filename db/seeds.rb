@@ -28,7 +28,6 @@ Product.create(
   view: 9
   )
 
-
 Product.create(
   name: "Ao Dai",
   category_id: "2",
@@ -47,6 +46,7 @@ Product.create(
   image_list: "",
   view: 7
   )
+
 Product.create(
   name: "Vong Co",
   category_id: "8",
@@ -79,5 +79,6 @@ User.create!(name:  "Example User",
               password_confirmation: password,
               address: "Hanoi",
               activated: true,
+              address: "Hanoi",
               activated_at: Time.zone.now)
 end
