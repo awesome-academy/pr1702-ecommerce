@@ -23,7 +23,7 @@ header{
   float: left;
 }
 
-#img-Logo {
+#img-logo {
   margin: 10px 12px;
 }
 
@@ -31,7 +31,7 @@ header{
   margin: 18px 12px;
 }
 
-#img-Backgroud {
+#img-backgroud {
   width: 100%;
   height: 900px;
 }
@@ -56,11 +56,7 @@ header{
 
 #login {
   float: right;
-  margin: 18px 25px;
-}
-
-#info-Product {
-  float: left;
+  margin: 6px 6px;
 }
 
 .fieldset {
@@ -70,24 +66,24 @@ header{
   border: 1px solid;
 }
 
-#ul-Products {
+#ul-products {
   margin: -10px 0px 10px -20px;
 }
 
-#list-Description {
+#list-description {
   margin-bottom: -15px;
   margin-top: -5px;
   padding-left: 0px;
   text-align: center;
 }
 
-#li-Product {
+#li-product {
   margin-top: -5px;
   margin-bottom: 5px;
   list-style-type: none;
 }
 
-#price-Product {
+#price-product {
   color: red;
   font-size: 22px;
   margin-top: 15px;
@@ -95,15 +91,11 @@ header{
   text-align: center;
 }
 
-#img-Image {
-  margin: 0px 10px 0px -30px;
-}
-
-#product-Name {
+#product-name {
   margin-top: 6px;
 }
 
-#img-Image {
+#img-image {
   margin: 0px 0px 0px -40px
 }
 
@@ -123,7 +115,6 @@ a {
   float: right;
   margin: 18px 25px;
 }
-
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -199,11 +190,11 @@ input {
   margin-left: 0;
 }
 
-#sign-Up {
+#sign-up {
   text-align: center;
 }
 
-#log-In {
+#log-in {
   text-align: center;
 }
 
@@ -213,4 +204,19 @@ input {
 
 .product {
   width: 83%;
+}
+
+.price-info-product {
+  color: red;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.view-info-product {
+  text-align: left;
+}
+
+#path-product {
+  margin: 14px 0px 20px;
 }

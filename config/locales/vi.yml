@@ -1,0 +1,8 @@
+vi:
+  number:
+    currency:
+      format:
+        unit: "VND"
+        precision: 0
+        delimiter: "."
+        format: "%n %u"

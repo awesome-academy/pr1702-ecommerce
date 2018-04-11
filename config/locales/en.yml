@@ -1,4 +1,8 @@
 en:
+  controller:
+    products:
+      show:
+        not_found: "Product not found"
   layouts:
     footer:
       slogan_footer: "YC Company By Awesome Academy"
@@ -22,9 +26,14 @@ en:
       show: "Show"
       edit: "Edit"
       destroy: "Destroy"
+      search: "Search...."
     products:
       posted: "Posted"
       ago: "ago."
+    show:
+      home: "Home"
+      clothings: "Clothing"
+      view: "View: "
   is_not_supported: "is not supported"
   Check_mail: "Please check your email to activate your account"
   Invalid: "Invalid email/password combination"

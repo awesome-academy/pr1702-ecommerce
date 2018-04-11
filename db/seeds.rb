@@ -1,7 +1,7 @@
 Product.create(
   name: "Quan Vai Dai 1",
   category_id: "1",
-  price: 200.000 ,
+  price: 200000 ,
   discount: 0 ,
   image_link: "quanVai1.jpeg",
   image_list: "",
@@ -11,7 +11,7 @@ Product.create(
 Product.create(
   name: "Quan Bo",
   category_id: "6",
-  price: 300.000 ,
+  price: 300000 ,
   discount: 0 ,
   image_link: "quanBo.jpg",
   image_list: "",
@@ -21,7 +21,7 @@ Product.create(
 Product.create(
   name: "Quan Vai Dai 2",
   category_id: "1",
-  price: 250.000 ,
+  price: 250000 ,
   discount: 0 ,
   image_link: "quanVai2.jpg",
   image_list: "",
@@ -31,7 +31,7 @@ Product.create(
 Product.create(
   name: "Ao Dai",
   category_id: "2",
-  price: 200.000 ,
+  price: 200000 ,
   discount: 0 ,
   image_link: "aoDai.jpg",
   image_list: "",
@@ -40,7 +40,7 @@ Product.create(
 Product.create(
   name: "Giay Tay",
   category_id: "8",
-  price:  500.000 ,
+  price:  500000 ,
   discount: 0 ,
   image_link: "giayTay.jpg",
   image_list: "",
@@ -50,7 +50,7 @@ Product.create(
 Product.create(
   name: "Vong Co",
   category_id: "8",
-  price: 200.000 ,
+  price: 200000 ,
   discount: 0 ,
   image_link: "vongCo.jpeg",
   image_list: "",
@@ -77,7 +77,6 @@ User.create!(name:  "Example User",
               email: email,
               password:              password,
               password_confirmation: password,
-              address: "Hanoi",
               activated: true,
               address: "Hanoi",
               activated_at: Time.zone.now)
