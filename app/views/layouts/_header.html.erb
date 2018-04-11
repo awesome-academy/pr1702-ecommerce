@@ -1,6 +1,6 @@
 <header id="header">
   <div id="logo" >
-    <a href=""><img id="img-Logo" src="https://st.mngbcn.com/static/assets/img/logo/mango.svg"></a>
+    <a href="/"><img id="img-logo" src="https://st.mngbcn.com/static/assets/img/logo/mango.svg"></a>
   </div>
 
   <div id="news">
@@ -15,9 +15,10 @@
     <%= link_to t(".contacts"), contact_path %>
   </div>
 
-  <div id="login">
-    <%= link_to t(".logins"), login_path%>
-      /
-    <%= link_to t(".sign_ins"), signin_path %>
-  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb" id="login">
+      <li class="breadcrumb-item"><%= link_to t(".logins"), login_path%></li>
+      <li class="breadcrumb-item"><%= link_to t(".sign_ins"), signin_path %></li>
+    </ol>
+  </nav>
 </header>

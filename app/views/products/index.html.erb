@@ -1,11 +1,11 @@
 <% provide :title, t(".clothings") %>
-<div id="product-Name">
+<div id="product-name">
   <div class="container-fluid">
     <div class="row content">
       <div class="col-sm-3 category">
         <h4>Mango Man</h4>
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search Blog..">
+          <input type="text" class="form-control" placeholder= <%= t(".search") %>>
           <span class="input-group-btn">
             <button class="btn btn-default" type="button">
               <span class="glyphicon glyphicon-search"></span>
@@ -20,31 +20,31 @@
       </div>
 
       <div class="col-sm-9 product">
-        <div class="product-List">
+        <div class="product-list">
           <% if @products.present? %>
             <% @products.each do |product| %>
               <fieldset class="fieldset">
                 <tbody>
-                  <div class="info-Product">
+                  <div class="info-product">
                     <ul>
-                      <div id="img-Image">
+                      <div id="img-image">
                         <%= link_to image_tag(product.image_link), product_path(product) %>
                       </div>
                     </ul>
 
-                    <ul id="list-Description">
-                      <li id="li-Product">
+                    <ul id="list-description">
+                      <li id="li-product">
                         <%= link_to product.name, product_path(product) %>
                       </li>
                     </ul>
 
-                    <ul id="price-Product">
+                    <ul id="price-product">
                       <div>
-                        <%= product.price %>.000
+                        <%= number_to_currency product.price , locale: :vi %>
                       </div>
                     </ul>
 
-                    <ul id="ul-Products">
+                    <ul id="ul-products">
                       <%= link_to t(".show"), product %>
                       <%= link_to t(".edit"), edit_product_path(product) %>
                       <%= link_to t(".destroy"), product,
