@@ -3,12 +3,13 @@ class SessionController < ApplicationController
   end
 
   def create
-    user = User.find_by email: params[:session][:email].downcase
+    user = User.find_by(email: params[:session][:email].downcase)
+
     if user && user.authenticate(params[:session][:password])
       if user.activated?
-        log_in user
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-        redirect_to root_url
+        log_in user
+        redirect_to user
       else
         flash[:warning] = t "not_active"
         redirect_to root_url
