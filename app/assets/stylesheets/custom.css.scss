@@ -96,7 +96,19 @@ header{
 }
 
 #img-image {
-  margin: 0px 0px 0px -40px
+  margin: 0px 0px 0px -40px;
+  width: 200px;
+  height: 200px;
+}
+
+.info-product img {
+  width: 200px;
+  height: 200px;
+}
+
+.text-center .row .img-link img {
+  width: 200px;
+  height: 200px;
 }
 
 a {

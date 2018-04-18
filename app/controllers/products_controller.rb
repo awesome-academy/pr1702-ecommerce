@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
-    @category = Category.all
-    @products = Product.filter_by_category params[:category_id]
+    @category = Category.load_info
+    @products = Product.load_info.paginate page: params[:page], per_page: 20
   end
 
   def show
