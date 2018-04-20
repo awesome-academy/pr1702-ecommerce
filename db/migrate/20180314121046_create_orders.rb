@@ -4,12 +4,7 @@ class CreateOrders < ActiveRecord::Migration[5.1]
 
       t.integer :status
       t.integer :user_id
-      t.string :user_name
-      t.string :user_email
-      t.integer :user_phone
-      t.integer :amount
-      t.string :payment
-      t.string :payment_info
+      t.integer :total_price
       t.text :message
 
       t.timestamps
