@@ -10,9 +10,9 @@ Rails.application.routes.draw do
 
   scope "(:locale)" do
     resources :products
-    resources :category
+    resources :categories
     resources :users
-    resources :account_activations, only: [:edit]
+    resources :account_activations, only: :edit
   end
 
   get 'signin'  => 'users#new'

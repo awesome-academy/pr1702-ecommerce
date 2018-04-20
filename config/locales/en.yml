@@ -7,8 +7,8 @@ en:
     footer:
       slogan_footer: "YC Company By Awesome Academy"
     header:
-      news: "New"
-      clothings: "Clothing"
+      news: "News"
+      clothings: "Clothings"
       contacts: "Contact"
       logins: "Login"
       sign_ins: "Sign_in"
@@ -16,25 +16,31 @@ en:
     contact:
       contacts: "Contact"
     news:
-      news: "New"
+      news: "News"
     home:
       homes: "Home"
   products:
     index:
-      clothings: "Clothing"
+      clothings: "Clothings"
       are_you_sure?: "Are you sure?"
       show: "Show"
       edit: "Edit"
       destroy: "Destroy"
       search: "Search...."
+      filter: "Search by product name..."
+      searching: "Search"
+      name: "Mango Man"
     products:
       posted: "Posted"
       ago: "ago."
     show:
       buy_now: "BUY NOW"
       home: "Home"
-      clothings: "Clothing"
+      clothings: "Clothings"
       view: "View: "
+  categories:
+    show:
+      filter: "Search by product name..."
   cart:
     show:
       title: "Shopping Cart"
@@ -46,7 +52,5 @@ en:
   Check_mail: "Please check your email to activate your account"
   Invalid: "Invalid email/password combination"
   not_active: "Account not activated. Check your email for the activation link"
-
   Activated: "Account Activated"
-
   Inv_link: "Invalid activation link"
