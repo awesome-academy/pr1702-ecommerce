@@ -31,6 +31,14 @@
       <div>
         <p class="view view-info-product"><%= t".view" %><%= @product.view %></p>
       </div>
+      <div class="clear-both"></div>
+      <button type="button" class="btn btn-success" id="button-buy-now">
+        <% if logged_in? %>
+          <%= link_to t(".buy_now"), cart_show_path %>
+        <% else %>
+          <%= link_to t(".buy_now"), login_path %>
+        <% end %>
+      </button>
     </div>
   </div>
 </div>

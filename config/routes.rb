@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "cart/show"
+
   root "static_pages#home"
 
   get "/news" , to: "static_pages#news"

@@ -10,6 +10,5 @@ class ProductsController < ApplicationController
       flash[:danger] = t("controller.products.show.not_found")
       redirect_to products_url
     end
-    #@category = Category.filter_by_product params[:category_id]
   end
 end

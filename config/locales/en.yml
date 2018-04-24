@@ -31,9 +31,17 @@ en:
       posted: "Posted"
       ago: "ago."
     show:
+      buy_now: "BUY NOW"
       home: "Home"
       clothings: "Clothing"
       view: "View: "
+  cart:
+    show:
+      title: "Shopping Cart"
+      are_you_sure?: "Are you sure?"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
   is_not_supported: "is not supported"
   Check_mail: "Please check your email to activate your account"
   Invalid: "Invalid email/password combination"
