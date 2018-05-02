@@ -1,5 +1,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'font-awesome';
 
 $gray-medium-light: #eaeaea;
 
@@ -12,15 +13,15 @@ body {
 }
 
 header{
-  width: auto;
-  height: 60px;
   border-bottom: 2px solid black;
+  height: 60px;
+  width: auto;
 }
 
 #logo {
-  width: 170px;
-  height: 60px;
   float: left;
+  height: 60px;
+  width: 170px;
 }
 
 #img-logo {
@@ -32,26 +33,26 @@ header{
 }
 
 #img-backgroud {
-  width: 100%;
   height: 900px;
+  width: 100%;
 }
 
 #news {
-  margin: 10px 12px 0px 300px;
   float: left;
   font-size: 20px;
+  margin: 10px 12px 0px 300px;
 }
 
 #clothing {
-  margin: 10px 12px 0px 30px;
   float: left;
   font-size: 20px;
+  margin: 10px 12px 0px 30px;
 }
 
 #contact {
-  margin: 10px 12px 0px 30px;
   float: left;
   font-size: 20px;
+  margin: 10px 12px 0px 30px;
 }
 
 #login {
@@ -60,10 +61,10 @@ header{
 }
 
 .fieldset {
-  float: left;
-  width: 220px;
-  margin: 0px 3px 5px 5px;
   border: 1px solid;
+  float: left;
+  margin: 0px 3px 5px 5px;
+  width: 220px;
 }
 
 #ul-products {
@@ -77,10 +78,10 @@ header{
   text-align: center;
 }
 
-#li-product {
-  margin-top: -5px;
-  margin-bottom: 5px;
+.name-product {
   list-style-type: none;
+  margin-bottom: 5px;
+  margin-top: -5px;
 }
 
 #price-product {
@@ -96,31 +97,31 @@ header{
 }
 
 #img-image {
+  height: 200px;
   margin: 0px 0px 0px -40px;
   width: 200px;
-  height: 200px;
 }
 
 .info-product img {
-  width: 200px;
   height: 200px;
+  width: 200px;
 }
 
 .text-center .row .img-link img {
-  width: 200px;
   height: 200px;
+  width: 200px;
 }
 
 a {
-  text-decoration: none !important;
-  padding: 5px 10px;
   display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none !important;
 }
 
 #Accessories {
-  margin: 18px 12px 0px 30px;
   float: left;
   font-size: 20px;
+  margin: 18px 12px 0px 30px;
 }
 
 #Login {
@@ -135,11 +136,11 @@ a {
 }
 
 .debug_dump {
+  @include box_sizing;
   clear: both;
   float: left;
-  width: 100%;
   margin-top: 45px;
-  @include box_sizing;
+  width: 100%;
 }
 
 aside {
@@ -147,23 +148,23 @@ aside {
     margin-top: 20px;
   }
   section {
-    padding: 10px 0;
     margin-top: 20px;
+    padding: 10px 0;
     &:first-child {
       border: 0;
       padding-top: 0;
     }
     span {
       display: block;
-      margin-bottom: 3px;
       line-height: 1;
+      margin-bottom: 3px;
     }
     h1 {
       font-size: 1.4em;
-      text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+      text-align: left;
     }
   }
 }
@@ -178,10 +179,10 @@ aside {
 }
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
   @include box_sizing;
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 input {
@@ -189,17 +190,17 @@ input {
 }
 
 .checkbox {
-  margin-top: -10px;
   margin-bottom: 10px;
+  margin-top: -10px;
   span {
-    margin-left: 20px;
     font-weight: normal;
+    margin-left: 20px;
   }
 }
 
 #session_remember_me {
-  width: auto;
   margin-left: 0;
+  width: auto;
 }
 
 #sign-up {
@@ -231,4 +232,54 @@ input {
 
 #path-product {
   margin: 14px 0px 20px;
+}
+
+#icon-shopping-cart {
+  float: right;
+  margin-top: 3px;
+}
+
+#button-buy-now {
+  background-color: greenyellow;
+  color: yellow;
+  font-size: 20px;
+  height: 70px;
+  width: 80%;
+}
+
+#button-buy-now:hover {
+  background-color: aquamarine;
+}
+
+#title-shopping-cart {
+  font-size: 50px;
+  text-align: center;
+}
+
+.fieldset-shopping-cart {
+  border: 1px solid black;
+  margin: 10px;
+}
+
+#name-product-shopping-cart {
+  font-size: 20px;
+  margin-top: 90px;
+}
+
+#price-product-shopping-cart {
+  font-size: 20px;
+  margin-top: 90px;
+}
+
+#quantity-product-shopping-cart {
+  margin-top: 90px;
+}
+
+#info-products-shopping-cart {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+}
+
+.fa-shopping-cart {
+  color: red;
 }

@@ -1,0 +1,48 @@
+<div id="title-shopping-cart">
+  <%= t".title" %>
+</div>
+
+<div>
+  <% if @products.present? %>
+    <% @products.each do |product| %>
+      <fieldset class="fieldset-shopping-cart">
+        <tbody>
+          <div class="info-product">
+            <div class="col-sm-3 img" id="image-product-shopping-cart">
+              <%= link_to image_tag(product.image_link), product %>
+            </div>
+
+            <div class="col-sm-2 name" id="name-product-shopping-cart">
+              <li class="name-product">
+                <%= link_to product.name, product %>
+              </li>
+            </div>
+
+            <div class="col-sm-2 price" id="price-product-shopping-cart">
+              <div>
+                <%= number_to_currency product.price, locale: :vi %>
+              </div>
+            </div>
+
+            <div class="col-sm-2 quantity" id="quantity-product-shopping-cart">
+              <%= number_field :quantity, min: 1 %>
+            </div>
+
+            <div class="col-sm-3 abc" id="info-products-shopping-cart">
+              <p>
+                <%= link_to t(".show"), product %>
+              </p>
+              <p>
+                <%= link_to t(".edit"), edit_product_path(product) %>
+              </p>
+              <p>
+                <%= link_to t(".destroy"), product,
+                  data: {confirm: t(".are_you_sure?")}, method: :delete %>
+              </p>
+            </div>
+          </div>
+        </tbody>
+      </fieldset>
+    <% end %>
+  <% end %>
+</div>
