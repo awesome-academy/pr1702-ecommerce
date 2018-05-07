@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :category
+  has_many :comments
 
   scope :load_info, -> {
     select("id, name, price, discount, image_link, image_list, view, category_id")
