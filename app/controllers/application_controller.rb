@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   protect_from_forgery with: :exception
   include SessionHelper
+  include ApplicationHelper
   def set_i18n_locale
     if params[:locale]
       if I18n.available_locales.include?(params[:locale].to_sym)

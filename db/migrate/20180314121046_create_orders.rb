@@ -5,6 +5,7 @@ class CreateOrders < ActiveRecord::Migration[5.1]
       t.integer :status
       t.integer :user_id
       t.integer :total_price
+      t.integer :sub_total_price
       t.text :message
 
       t.timestamps

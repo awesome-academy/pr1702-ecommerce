@@ -26,19 +26,22 @@
     </div>
     <div class="col-sm-1"></div>
     <div class="col-sm-8">
-      <p class="price price-info-product"><%= number_to_currency @product.price, locale: :vi %></p>
-      <div class="clear-both"></div>
-      <div>
-        <p class="view view-info-product"><%= t".view" %><%= @product.view %></p>
-      </div>
-      <div class="clear-both"></div>
-      <button type="button" class="btn btn-success" id="button-buy-now">
+      <%= form_for(@order_detail) do |f| %>
+        <%= f.hidden_field :product_id, value: @product.id %>
+        <p class="price price-info-product"><%= number_to_currency @product.price, locale: :vi %></p>
+        <div class="clear-both"></div>
+        <div>
+          <p class="view view-info-product"><%= t".view" %><%= @product.view %></p>
+        </div>
+        <div class="clear-both"></div>
+        <div class="form-group">
+            <%= f.number_field :quantity, value: 1, min: 1, class: 'form-control' %>
+        </div>
+        <div class="clear-both"></div>
         <% if logged_in? %>
-          <%= link_to t(".buy_now"), cart_show_path %>
-        <% else %>
-          <%= link_to t(".buy_now"), login_path %>
+          <%= f.submit t".add_in_cart", class: 'btn btn-primary btn-sm' %>
         <% end %>
-      </button>
+      <% end %>
     </div>
   </div>
 </div>

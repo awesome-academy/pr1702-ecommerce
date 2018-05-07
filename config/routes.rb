@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get "cart/show"
-
   root "static_pages#home"
 
   get "/news" , to: "static_pages#news"
@@ -10,6 +8,8 @@ Rails.application.routes.draw do
 
   scope "(:locale)" do
     resources :products
+    resources :order_details
+    resource :carts, only: [:show]
     resources :category
     resources :users
     resources :account_activations, only: [:edit]

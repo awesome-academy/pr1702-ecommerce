@@ -1,0 +1,52 @@
+<div id="title-shopping-cart">
+  <%= t".title" %>
+</div>
+
+<% if !@order_detail.nil? && @order_detail.errors.any? %>
+  <ul>
+    <% @order_detail.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @order_details.size>0 %>
+  <% @order_details.each do |item| %>
+    <fieldset class="fieldset-shopping-cart">
+      <tbody>
+        <div class="info-product">
+          <div class="col-sm-3 img" id="image-product-shopping-cart">
+            <%= link_to image_tag(item.product.image_link), product_path(item.product_id) %>
+          </div>
+
+          <div class="col-sm-2 name" id="name-product-shopping-cart">
+            <li class="name-product">
+              <%= link_to item.product.name, product_path(item.product_id) %>
+            </li>
+          </div>
+
+          <div class="pull-right" id="info-product-in-cart">
+            <%= form_for(item, remote: true) do |f| %>
+              <%= f.hidden_field :product_id, value: item.product.id %>
+              <h5><%= t(".unit_price") %><%= number_to_currency item.product.price, locale: :vi %></h5>
+              <div class="form-group">
+                <%= f.number_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
+              </div>
+              <div class="clear-both"></div>
+              <div class="btn-group">
+                <%= f.submit t(".update_quantity"), class: 'btn btn-primary btn-update' %>
+                <%= link_to t(".destroy"), order_detail_path(item), method: :delete,
+                  data: {confirm: t(".are_you_sure?")}, class: 'btn btn-danger' %>
+              </div>
+              <div class="clear-both"></div>
+              <span><%= t(".total_price") %><%= number_to_currency item.sub_price, locale: :vi %></span>
+            <% end %>
+          </div>
+        </div>
+      </tbody>
+    </fieldset>
+  <% end %>
+<% end %>
+<div>
+  <p id="total-price-all"><%= t(".total_all_price") %><%= number_to_currency current_order.subtotalprice, locale: :vi %></p>
+</div>
