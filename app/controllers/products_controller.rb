@@ -10,5 +10,9 @@ class ProductsController < ApplicationController
       flash[:danger] = t("controller.products.show.not_found")
       redirect_to products_url
     end
+    # @products = @category.products.paginate(page: params[:page])
+    @comments = @product.comments.order(created_at: :desc)
+    @comment = Comment.new
+    # redirect_to root_url and return unless @products
   end
 end
