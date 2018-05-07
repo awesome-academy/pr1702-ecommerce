@@ -1,24 +1,24 @@
-<% provide :title, t(".clothings") %>
 <div id="product-name">
   <div class="container-fluid">
     <div class="row content">
       <div class="col-sm-3 category">
-        <h3><%= t(".name") %></h3>
+        <% if @category.products.any? %>
+          <h3> <%= @category.name %> (<%= @category.products.count %>)</h3>
+        <% end %>
         <div class="input-group">
           <%= form_tag products_path, method: :get do %>
             <%= text_field_tag :search, params[:search], placeholder: t(".filter"), class: "form-control" %>
-            <%= submit_tag t(".searching"), class: "btn btn-primary" %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
           <% end %>
         </div>
         <% @categories.each do |category| %>
           <ul class="nav nav-pills nav-stacked">
-            <li>
+            <li class="<%= 'active' if category == @category %>">
               <%= link_to category.name, category %>
             </li>
           </ul><br>
         <% end %>
       </div>
-
       <div class="col-sm-9 product">
         <div class="product-list">
           <% if @products.present? %>
@@ -31,19 +31,16 @@
                         <%= link_to image_tag(product.image_link), product_path(product) %>
                       </div>
                     </ul>
-
                     <ul id="list-description">
                       <li id="li-product">
                         <%= link_to product.name, product_path(product) %>
                       </li>
                     </ul>
-
                     <ul id="price-product">
                       <div>
                         <%= number_to_currency product.price , locale: :vi %>
                       </div>
                     </ul>
-
                     <ul id="ul-products">
                       <%= link_to t(".show"), product %>
                       <%= link_to t(".edit"), edit_product_path(product) %>
@@ -57,7 +54,7 @@
           <% end %>
         </div>
         <div class="clear-both"></div>
-        <%= will_paginate %>
+        <%= will_paginate @products %>
       </div>
     </div>
   </div>

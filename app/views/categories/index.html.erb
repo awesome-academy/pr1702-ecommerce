@@ -1,0 +1,48 @@
+<nav aria-label="breadcrumb" id="path-product">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to t(".home"), root_path %></li>
+    <li class="breadcrumb-item"><%= link_to t(".clothings"), clothing_path %></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @product.category_name %></li>
+  </ol>
+</nav>
+<h1 class="h-title">
+  <%= @product.name %>
+</h1>
+<div class="clear-both"></div>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-3 well">
+      <div class="well img-link">
+        <div id="img-product">
+          <%= image_tag @product.image_link %>
+        </div>
+      </div>
+      <div class="well">
+          <div>
+            <%= @product.name %>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-8">
+      <p class="price price-info-product"><%= number_to_currency @product.price, locale: :vi %></p>
+      <div class="clear-both"></div>
+      <div>
+        <p class="view view-info-product"><%= t".view" %><%= @product.view %></p>
+      </div>
+      <div class="clear-both"></div>
+      <button type="button" class="btn btn-success" id="button-buy-now">
+        <% if logged_in? %>
+          <%= link_to t(".buy_now"), cart_show_path %>
+        <% else %>
+          <%= link_to t(".buy_now"), login_path %>
+        <% end %>
+      </button>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid text-center">
+</footer>
+
+.

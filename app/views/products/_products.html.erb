@@ -1,7 +1,4 @@
-<li id="products-<%= products.id %>">
-  <span class="user"><%= link_to products.name, micropost.user %></span>
-  <span class="content"><%= micropost.content %></span>
-  <span class="timestamp">
-    <%= t(".posted")%> <%= time_ago_in_words micropost.created_at %> <%= t(".ago")%>
-  </span>
+<li id="products-#{products.id}">
+  <%= product.category.name %>
+  <span class="categories"><% link_to product.category.name, product.category %></span>
 </li>
