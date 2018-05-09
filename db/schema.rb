@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180314121325) do
     t.integer "product_id"
     t.integer "quantity"
     t.integer "sub_price"
+    t.integer "unit_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180314121325) do
     t.integer "status"
     t.integer "user_id"
     t.integer "total_price"
+    t.integer "sub_total_price"
     t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

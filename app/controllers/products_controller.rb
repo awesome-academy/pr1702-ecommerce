@@ -10,5 +10,16 @@ class ProductsController < ApplicationController
       flash[:danger] = t("controller.products.show.not_found")
       redirect_to products_url
     end
+    @order_detail = current_order.order_details.new
+  end
+
+  def edit
+
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to products_url
   end
 end

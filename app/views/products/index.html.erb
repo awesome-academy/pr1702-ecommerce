@@ -33,7 +33,7 @@
                     </ul>
 
                     <ul id="list-description">
-                      <li id="li-product">
+                      <li class="name-product">
                         <%= link_to product.name, product_path(product) %>
                       </li>
                     </ul>
@@ -47,7 +47,7 @@
                     <ul id="ul-products">
                       <%= link_to t(".show"), product %>
                       <%= link_to t(".edit"), edit_product_path(product) %>
-                      <%= link_to t(".destroy"), product,
+                      <%= link_to t(".destroy"), product_path(product),
                         data: {confirm: t(".are_you_sure?")}, method: :delete %>
                     </ul>
                   </div>
